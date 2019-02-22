@@ -11,16 +11,6 @@ beforeEach(() => {
   });
 });
 
-it("store created", () => {
-  expect(store.getState("users")).toEqual(["a", "z", "u"]);
-});
-
-it("pushUser", () => {
-  const pushUser = store.createAction("users", push);
-  pushUser("test");
-  expect(store.getState("users")).toEqual(["a", "z", "u", "test"]);
-});
-
 it("subscribe", () => {
   const pushUser = store.createAction("users", push);
 

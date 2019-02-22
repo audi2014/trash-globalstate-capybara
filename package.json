@@ -2,7 +2,7 @@
   "name": "globalstate-capybara",
   "version": "1.0.0",
   "description": "managing global state",
-  "keywords": ["globalstate", "capybara", "global-state", "global state"],
+  "keywords": [],
   "main": "src/index.js",
   "scripts": {},
   "files": ["src"],
