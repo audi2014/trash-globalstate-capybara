@@ -1,2 +1,2 @@
 export const createMiddleware = (mid, params, next) => (...args) =>
-  mid(...args, params, next);
+  mid(...args)(params, next);

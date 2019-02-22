@@ -15,22 +15,29 @@ beforeEach(() => {
     "test_info"
   );
 });
-it("dispatch-logger", done => {
-  store.applyMiddleware((v, s, n) => {
-    expect(v.info).toEqual("test_info");
-    done();
-    n(v);
-  }, "dispatch");
-
+it("dispatch-logger", () => {
+  let m_info = "";
+  store.applyMiddleware(
+    v => (store, next) => {
+      m_info = v.info;
+      next(v);
+    },
+    "dispatch"
+  );
   action("test_v");
+  expect(m_info).toEqual("test_info");
+  expect(store.getState("users")).toEqual(["a", "z", "u", "test_v"]);
 });
 
 it("subscribe-logger", done => {
-  store.applyMiddleware((cb, keys, info, store, next) => {
-    expect(keys).toEqual(["users", "???"]);
-    expect(info).toEqual("test_info");
-    next(cb, keys, info);
-  }, "subscribe");
+  store.applyMiddleware(
+    (cb, keys, info) => (store, next) => {
+      expect(keys).toEqual(["users", "???"]);
+      expect(info).toEqual("test_info");
+      next(cb, keys, info);
+    },
+    "subscribe"
+  );
 
   store.subscribe(
     e => {
@@ -45,12 +52,15 @@ it("subscribe-logger", done => {
 
 it("unsubscribe-logger", done => {
   const id = store.subscribe(e => {}, ["users", "???"], "test_info");
-  store.applyMiddleware((cb, info, store, next) => {
-    expect(cb).toBe(id);
-    expect(info).toEqual("info-of-unsub");
-    next(cb);
-    done();
-  }, "unsubscribe");
+  store.applyMiddleware(
+    (cb, info) => (store, next) => {
+      expect(cb).toBe(id);
+      expect(info).toEqual("info-of-unsub");
+      next(cb);
+      done();
+    },
+    "unsubscribe"
+  );
 
   store.unsubscribe(id, "info-of-unsub");
 });
