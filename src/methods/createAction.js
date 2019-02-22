@@ -1,10 +1,9 @@
-export const createAction = (
-  { key, mutation, info },
-  { getState, dispatch }
-) => (...actionArgs) =>
-  dispatch({
+export const createAction = ({ key, mutation, info }, store) => (
+  ...actionArgs
+) =>
+  store.dispatch({
     key,
-    value: mutation({ key, value: getState(key), info }, ...actionArgs),
+    value: mutation({ key, value: store.getState(key), info }, ...actionArgs),
     info
   });
 

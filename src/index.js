@@ -13,7 +13,7 @@ export default (initialState = {}, info) => {
       z.subscriptions = m.subscribe(cb, storeprops, info, store);
       return cb; // return subscr id
     },
-    unsubscribe: (cb, storeprops = []) => {
+    unsubscribe: cb => {
       z.subscriptions = m.unsubscribe(cb, store.getSubscriptions);
     },
     setState: nextState => {

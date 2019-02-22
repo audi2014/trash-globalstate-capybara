@@ -6,7 +6,7 @@ export default (cb, storeprops, info, { getSubscriptions, getState }) => {
     storeprops.forEach(key => {
       const prev = getState(key);
       const value = prev;
-      cb({ key, value, prev });
+      cb({ key, value, prev, info: "__init__" });
     });
   } else {
     console.error("handler can't subscribe twice");
