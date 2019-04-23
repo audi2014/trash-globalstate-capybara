@@ -31,7 +31,7 @@ exports.mapValue = function (key, nextValue, prevValue) {
 exports.mapStateToProps = function (state) {
     return state;
 };
-exports.withGlobalState = function (wrappedComponent, store, storeProps, builder) {
+exports.index = function (wrappedComponent, store, storeProps, builder) {
     if (storeProps === void 0) { storeProps = []; }
     if (builder === void 0) { builder = {
         mapValue: null,

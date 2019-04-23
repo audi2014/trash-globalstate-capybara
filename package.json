@@ -1,9 +1,10 @@
 {
   "name": "globalstate-capybara",
-  "version": "1.0.0",
-  "description": "managing global state",
+  "version": "1.0.1",
+  "description": "managing global state (ts)",
   "keywords": [],
-  "main": "src/index.js",
+  "main": "./src/main.js",
+  "types": "./src/main.d.ts",
   "scripts": {
     "test": "jest"
   },

@@ -15,7 +15,7 @@ type t_builder = {
 }
 
 
-export const withGlobalState = <P extends object>(
+export const index = <P extends object>(
     wrappedComponent: React.ComponentType<P>,
     store: Store,
     storeProps: string[] = [],
