@@ -48,4 +48,4 @@ export const withGlobalState = <P extends object>(
             });
         }
     };
-}
+};
