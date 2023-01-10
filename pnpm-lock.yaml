@@ -10,7 +10,7 @@ specifiers:
   jest: ^24.1.0
   react: ^16.8.6
   ts-jest: ^24.0.2
-  typescript: ^3.4.4
+  typescript: ^4.9.4
 
 dependencies:
   react: 16.14.0
@@ -24,7 +24,7 @@ devDependencies:
   babel-jest: 24.9.0_@babel+core@7.20.12
   jest: 24.9.0
   ts-jest: 24.3.0_jest@24.9.0
-  typescript: 3.9.10
+  typescript: 4.9.4
 
 packages:
 
@@ -4571,8 +4571,8 @@ packages:
       is-typed-array: 1.1.10
     dev: true
 
-  /typescript/3.9.10:
-    resolution: {integrity: sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==}
+  /typescript/4.9.4:
+    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
