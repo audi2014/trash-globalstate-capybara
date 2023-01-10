@@ -1,3 +1,5 @@
+# DO NOT USE IT! This is test dummy project. i just learn TS
+
 | [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/audi2014/globalstate-capybara/blob/master/LICENSE) | ![enter image description here](https://github.com/audi2014/globalstate-capybara/raw/master/CoreConcepts.png)                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![npm version](https://img.shields.io/npm/v/globalstate-capybara.svg?style=flat)](https://www.npmjs.com/package/globalstate-capybara)       | [![npm](https://img.shields.io/npm/dw/globalstate-capybara.svg)](https://www.npmjs.com/package/globalstate-capybara)                                     |
